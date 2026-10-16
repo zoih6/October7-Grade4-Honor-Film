@@ -1,23 +1,32 @@
 #!/bin/bash
-# جزء واحد: رندر نهائي (1080×1920 · 30fps · sub=2) → دمج صوت المعاينة → رفع إلى GitHub
-# usage: tools/part.sh 0 40 p01_f0-40
-set -u
+# جزء: رندر نهائي (1080×1920 · 30fps) → دمج الصوت → رفع كأصل في GitHub Release → تحديث السجل
+# usage: tools/part.sh 0 10 p01
+set -uo pipefail
 F=$1; T=$2; N=$3
 REPO=/home/user/october7-grade4-honor-film
 TOK=$(cat /home/user/.cache/gh/tok)
 export PLAYWRIGHT_BROWSERS_PATH=/home/user/.cache/pw
-mkdir -p /home/user/.cache/out "$REPO/preview/parts"
+mkdir -p /home/user/.cache/out/parts
+echo "── [$N] بدء رندر $F → $T · $(date +%H:%M:%S) ──"
 cd "$REPO/film"
-echo "── [$N] رندر $F → $T عند $(date +%H:%M:%S) ──"
-PAGE=index.html node ../tools/render.mjs --from "$F" --to "$T" --out "/home/user/.cache/out/$N.silent.mp4" 2>&1 | tail -3
-rm -f "$REPO/preview/parts/$N.mp4"
-ffmpeg -v error -y -ss "$F" -i "/home/user/.cache/out/$N.silent.mp4" -ss "$F" -i /home/user/.cache/audio/bed.m4a \
-  -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -movflags +faststart -shortest "$REPO/preview/parts/$N.mp4"
-DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$REPO/preview/parts/$N.mp4")
-echo "── [$N] جاهز $DUR ثانية · $(du -h "$REPO/preview/parts/$N.mp4" | cut -f1) ──"
-cd "$REPO"
-git add -A >/dev/null 2>&1
-git -c user.name="October7 Studio" -c user.email="studio@local" commit -qm "جزء $N ($F–$T ث) — رندر نهائي 1080×1920" >/dev/null 2>&1
-git push -q "https://x-access-token:$TOK@github.com/zoih6/October7-Grade4-Honor-Film.git" HEAD:main 2>&1 | tail -1
-echo "── [$N] مرفوع إلى GitHub ✓ ──"
-echo "PART_$N_DONE"
+if ! PAGE=index.html node ../tools/render.mjs --from "$F" --to "$T" --out "/home/user/.cache/out/parts/$N.silent.mp4" > "/home/user/.cache/out/parts/$N.log" 2>&1; then
+  echo "!! [$N] فشل الرندر — لن يُرفع. آخر السجل:"; tail -4 "/home/user/.cache/out/parts/$N.log"; exit 1
+fi
+ffmpeg -v error -y -ss "$F" -i "/home/user/.cache/out/parts/$N.silent.mp4" -ss "$F" -i /home/user/.cache/audio/bed.m4a \
+  -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -movflags +faststart -shortest "/home/user/.cache/out/parts/$N.mp4" || { echo "!! [$N] فشل الصوت"; exit 1; }
+DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "/home/user/.cache/out/parts/$N.mp4")
+SIZE=$(stat -c%s "/home/user/.cache/out/parts/$N.mp4")
+echo "── [$N] جاهز: $DUR ث · $((SIZE/1048576))MB ──"
+# رفع كأصل في الـRelease (لا يُثقل المستودع)
+UP="https://uploads.github.com/repos/zoih6/October7-Grade4-Honor-Film/releases/$(cat /home/user/.cache/rel_id)/assets?name=$N.mp4"
+for i in 1 2 3; do
+  RID=$(curl -s -X POST -H "Authorization: Bearer $TOK" -H "Content-Type: video/mp4" --data-binary "@-${0}" "@-" < /dev/null 2>/dev/null; true)
+  curl -s -o /home/user/.cache/out/parts/up.json -w "%{http_code}" -X POST \
+    -H "Authorization: Bearer $TOK" -H "Content-Type: application/video" \
+    --data-binary "@/home/user/.cache/out/parts/$N.mp4" "$UP" > /home/user/.cache/out/parts/code.txt
+  CODE=$(cat /home/user/.cache/out/parts/code.txt)
+  [ "$CODE" = "201" ] && { echo "── [$N] مرفوع ✓ ($DUR ث) ──"; break; }
+  echo "…[$N] محاولة رفع $i أعادت $CODE"; sleep 5
+done
+[ "$(cat /home/user/.cache/out/parts/code.txt)" = "201" ] || echo "!! [$N] لم يُرفع — الملف محلي في /home/user/.cache/out/parts/$N.mp4"
+echo "PART_${N}_DONE"
