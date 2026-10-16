@@ -4,8 +4,8 @@
 // ═══════════════════════════════════════════════════════════════════════════
 (() => {
   const P = {};
-  const BARS = () => (typeof SONG_BARS !== 'undefined' ? SONG_BARS.filter((b) => b > 99 && b < 112) : [102, 103, 104, 105.5, 107, 108, 109, 110]);
-  const T = { start: 99.3, one: 102.1, two: 103.1, three: 104.15, yalla: 105.35, wall: 106.4, out: 112.0 };
+  const BARS = () => (typeof SONG_BARS !== 'undefined' ? SONG_BARS.filter((b) => b > 99.2 && b < 112) : [100.7, 101.7, 102.7, 104.6, 106, 107.4, 109, 110.4, 111.4]);
+  const T = { start: 99.4, one: 100.75, two: 101.75, three: 102.7, yalla: 103.15, wall: 104.6, two2: 109.05, yalla2: 111.35, out: 112.0 };
   INITS.push(async () => {
     P.num = ['١', '٢', '٣'].map((n, i) => T7.TX(n, { size: 300, color: i === 2 ? PAL.goldD : PAL.navy, font: K7.FONTS.n, weight: 900 }));
     P.one = T7.TX('One', { size: 190, color: PAL.navy, font: K7.FONTS.n, weight: 900 });
@@ -60,6 +60,24 @@
           g.shadowColor = 'rgba(255,205,110,.8)'; g.shadowBlur = 26; g.drawImage(P.yalla.img, -P.yalla.img.width / 2, -P.yalla.img.height / 2); g.restore();
           K7.confetti(t, T.yalla, { x: 540, y: 1520, n: 70, power: 1.3, spread: 2.2, seed: 143, grav: 620, dur: 3.0 });
           K7.twinkle(540, 1560, t, T.yalla, { n: 3, R: 320, dur: .9, size: 34, seed: 71 });
+        }
+        // الإعادة الثانية «١ ٢ ٣ يلا» (109.0–112.3)
+        if (t > T.two2 - .2) {
+          const rp = [['١', T.two2], ['٢', T.two2 + .95], ['٣', T.two2 + 1.9]];
+          rp.forEach(([txt, t0], i) => {
+            const k = spring(t - t0, 340, 25); if (k <= .002) return;
+            const wd = T7.TX(txt, { size: 170, color: i === 2 ? PAL.goldD : PAL.navy, font: K7.FONTS.n, weight: 900 });
+            g.save(); g.globalAlpha = clamp(k * 2.4); g.translate(300 + i * 240, 700 + (1 - k) * -60); g.scale(lerp(.7, 1, k), lerp(.7, 1, k));
+            g.save(); g.shadowColor = 'rgba(0,0,0,.45)'; g.shadowBlur = 20; g.shadowOffsetY = 8;
+            g.fillStyle = 'rgba(248,241,224,.96)'; rrect(-wd.img.width / 2 - 34, -wd.img.height / 2 - 28, wd.img.width + 68, wd.img.height + 56, 12, g); g.fill(); g.restore();
+            g.rotate(i === 1 ? .03 : -.04);
+            g.drawImage(wd.img, -wd.img.width / 2, -wd.img.height / 2); g.restore();
+            K7.confetti(t, t0, { x: 300 + i * 240, y: 700, n: 12, power: .55, spread: 2.4, seed: 160 + i, grav: 700, dur: 1.3, size: .6 });
+          });
+          const ky2 = spring(t - T.yalla2, 420, 22);
+          if (ky2 > .002) { g.save(); g.globalAlpha = clamp(ky2 * 3); g.translate(540, 1010); const s2 = lerp(.35, 1, ky2); g.scale(s2, s2);
+            g.shadowColor = 'rgba(255,205,110,.85)'; g.shadowBlur = 26; g.drawImage(P.yalla.img, -P.yalla.img.width / 2, -P.yalla.img.height / 2); g.restore();
+            K7.confetti(t, T.yalla2, { x: 540, y: 990, n: 54, power: 1.2, spread: 2.3, seed: 171, grav: 640, dur: 2.6 }); }
         }
         // بداية الكولاج: ١٣ بطاقة تتجمع
         const kw = clamp((t - T.wall) / 1.2);

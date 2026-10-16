@@ -4,7 +4,7 @@
 // ═══════════════════════════════════════════════════════════════════════════
 (() => {
   const P = {};
-  const T = { wall: 112.1, l1: 112.6, l2: 116.2, pull: 120.6, wall2: 121.2, star: 124.6, end: 130.0 };
+  const T = { wall: 112.1, l1: 112.35, l2: 116.35, pull: 120.6, wall2: 120.75, star: 125.3, end: 130.0 };
   INITS.push(async () => {
     P.title = T7.G('أكتوبر غنى', { size: 130, font: K7.FONTS.d, weight: 800 });
     P.sub = T7.TX('بأفراح لنا', { size: 104, color: PAL.navy, font: K7.FONTS.d, weight: 800 });
@@ -36,10 +36,10 @@
           g.strokeStyle = 'rgba(201,162,39,.9)'; g.lineWidth = 4; rrect(-w0 / 2 + 8, -h0 / 2 + 8, w0 - 16, h0 - 16, 9, g); g.stroke();
           g.drawImage(wd, -wd.width / 2, -wd.height / 2); g.restore(); }
         // الكلمات (كتبة متزامنة)
-        T7.lyric('أكتوبر غنى بأفراح لنا', t, { x: 540, y: 1560, size: 108, from: T.l1, to: T.l2 - .2, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 30 });
-        T7.lyric('والصف رابع صار نجما بيننا', t, { x: 540, y: 1730, size: 84, from: T.l2, to: 120.4, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 900, gap: 24 });
-        T7.lyric('أكتوبر غنى بأفراح لنا', t, { x: 540, y: 1560, size: 108, from: T.wall2 + .2, to: 124.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 30 });
-        T7.lyric('والصف رابع صار نجما بيننا', t, { x: 540, y: 1730, size: 84, from: T.star - .2, to: 129.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 900, gap: 24 });
+        T7.lyric('أكتوبر غنّى بأفراح لنا', t, { x: 540, y: 1560, size: 104, from: T.l1, to: T.l2 - .15, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 28 });
+        T7.lyric('والصف رابع صار نجمان بيننا', t, { x: 540, y: 1730, size: 82, from: T.l2, to: 120.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 920, gap: 22 });
+        T7.lyric('أكتوبر غنّى بأفراح لنا', t, { x: 540, y: 1560, size: 104, from: T.wall2, to: 125.2, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 28 });
+        T7.lyric('والصف رابع صار نجمان بيننا', t, { x: 540, y: 1730, size: 82, from: T.star, to: 129.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 920, gap: 22 });
         // التاج/النجمة المركزية في الإعادة الثانية
         const kstar = spring(t - T.star, 320, 24);
         if (kstar > .002) {
@@ -53,10 +53,10 @@
           K7.confetti(t, T.star, { x: 540, y: 1000, n: 60, power: 1.1, spread: 2.4, seed: 161, grav: 600, dur: 3.0 });
         }
         // الكلمات (كتبة متزامنة)
-        T7.lyric('أكتوبر غنى بأفراح لنا', t, { x: 540, y: 1560, size: 108, from: T.l1, to: T.l2 - .2, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 30 });
-        T7.lyric('والصف رابع صار نجما بيننا', t, { x: 540, y: 1730, size: 84, from: T.l2, to: 120.4, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 900, gap: 24 });
-        T7.lyric('أكتوبر غنى بأفراح لنا', t, { x: 540, y: 1560, size: 108, from: T.wall2 + .2, to: 124.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 30 });
-        T7.lyric('والصف رابع صار نجما بيننا', t, { x: 540, y: 1730, size: 84, from: T.star - .2, to: 129.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 900, gap: 24 });
+        T7.lyric('أكتوبر غنّى بأفراح لنا', t, { x: 540, y: 1560, size: 104, from: T.l1, to: T.l2 - .15, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 28 });
+        T7.lyric('والصف رابع صار نجمان بيننا', t, { x: 540, y: 1730, size: 82, from: T.l2, to: 120.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 920, gap: 22 });
+        T7.lyric('أكتوبر غنّى بأفراح لنا', t, { x: 540, y: 1560, size: 104, from: T.wall2, to: 125.2, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [0], maxW: 900, gap: 28 });
+        T7.lyric('والصف رابع صار نجمان بيننا', t, { x: 540, y: 1730, size: 82, from: T.star, to: 129.6, color: '#f6ecd4', hi: PAL.goldL, hiIdx: [4, 5], maxW: 920, gap: 22 });
         // شريط سفلي للكلمات (قراءة مضمونة على الجوال)
         const ksc = clamp((t - 112.6) / .6);
         if (ksc > 0) { g.save(); g.globalAlpha = ksc * .92;
