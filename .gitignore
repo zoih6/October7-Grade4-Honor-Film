@@ -1,0 +1,10 @@
+node_modules/
+film/tmp/
+film/out/
+out/
+dist/
+.pytest_cache/
+__pycache__/
+*.pyc
+.DS_Store
+preview/*.mp4
