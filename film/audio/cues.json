@@ -2,7 +2,7 @@
  "fps": 30,
  "duration_s": 235.998,
  "energy": "punchy",
- "kit": "audio/kit",
+ "kit": "/home/user/.cache/slfx/kit",
  "cues": [
   {
    "id": "s00-dot",
@@ -753,6 +753,14 @@
    "src": "appear @99.998s"
   },
   {
+   "id": "s20-one",
+   "frame": 3031,
+   "visual": "land",
+   "sound": "tap",
+   "pan": -0.3,
+   "src": "spring snap @100.75s → land"
+  },
+  {
    "id": "s20-beat2",
    "frame": 3035,
    "visual": "appear",
@@ -761,31 +769,40 @@
    "src": "appear @101.136s"
   },
   {
-   "id": "s20-one",
-   "frame": 3071,
-   "visual": "land",
-   "sound": "tap",
-   "pan": -0.3,
-   "src": "spring snap @102.1s → land"
-  },
-  {
    "id": "s20-two",
-   "frame": 3101,
+   "frame": 3061,
    "visual": "land",
    "sound": "tap",
    "pan": 0,
-   "src": "spring snap @103.1s → land"
+   "src": "spring snap @101.75s → land"
   },
   {
    "id": "s20-three",
-   "frame": 3133,
+   "frame": 3089,
    "visual": "land",
    "sound": "thump+tap",
    "weight": "hero",
    "pan": 0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @104.15s → land"
+   "src": "spring snap @102.7s → land"
+  },
+  {
+   "id": "s20-yalla",
+   "frame": 3095,
+   "visual": "appear",
+   "sound": "thump+chime",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @103.15s → start"
+  },
+  {
+   "id": "s20-wall",
+   "frame": 3141,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "spring card @104.6s → peak"
   },
   {
    "id": "s20-beat4",
@@ -794,23 +811,6 @@
    "sound": "tick",
    "pan": -0.44999999999999996,
    "src": "appear @105.037s"
-  },
-  {
-   "id": "s20-yalla",
-   "frame": 3161,
-   "visual": "appear",
-   "sound": "thump+chime",
-   "weight": "hero",
-   "stop_before": true,
-   "build": true,
-   "src": "spring pop @105.35s → start"
-  },
-  {
-   "id": "s20-wall",
-   "frame": 3195,
-   "visual": "move",
-   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
-   "src": "spring card @106.4s → peak"
   },
   {
    "id": "s20-beat6",
@@ -837,13 +837,13 @@
   },
   {
    "id": "s21-title",
-   "frame": 3379,
+   "frame": 3371,
    "visual": "appear",
    "sound": "thump+tap",
    "weight": "hero",
    "stop_before": true,
    "build": true,
-   "src": "spring pop @112.6s → start"
+   "src": "spring pop @112.35s → start"
   },
   {
    "id": "s21-pull",
@@ -854,75 +854,75 @@
   },
   {
    "id": "s21-star",
-   "frame": 3746,
+   "frame": 3767,
    "visual": "land",
    "sound": "thump+chime",
    "weight": "hero",
    "stop_before": true,
    "build": true,
-   "src": "spring snap @124.6s → land"
+   "src": "spring snap @125.3s → land"
   },
   {
    "id": "s22-0",
-   "frame": 3900,
+   "frame": 3891,
    "visual": "cut",
    "sound": "transition",
    "pan": -0.3,
-   "src": "cut @130s"
+   "src": "cut @129.7s"
   },
   {
    "id": "s22-0-card",
-   "frame": 3922,
+   "frame": 3913,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": -0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @130.45s → land"
+   "src": "spring snap @130.15s → land"
   },
   {
    "id": "s22-0-live",
-   "frame": 3929,
+   "frame": 3920,
    "visual": "appear",
    "sound": "paper",
    "pan": 0.3,
-   "src": "spring card @130.95s → start"
+   "src": "spring card @130.65s → start"
   },
   {
    "id": "s22-0-seal",
-   "frame": 3938,
+   "frame": 3929,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @131.25s → start"
+   "src": "spring snap @130.95s → start"
   },
   {
    "id": "s22-1",
-   "frame": 4029,
+   "frame": 4020,
    "visual": "cut",
    "sound": "paper",
    "pan": 0,
-   "src": "cut @134.3s"
+   "src": "cut @134s"
   },
   {
    "id": "s22-1-card",
-   "frame": 4051,
+   "frame": 4042,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @134.75s → land"
+   "src": "spring snap @134.45s → land"
   },
   {
    "id": "s22-1-seal",
-   "frame": 4067,
+   "frame": 4058,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @135.55s → start"
+   "src": "spring snap @135.25s → start"
   },
   {
    "id": "s22-1-k0",
@@ -935,38 +935,38 @@
   },
   {
    "id": "s22-2",
-   "frame": 4173,
+   "frame": 4158,
    "visual": "cut",
    "sound": "paper",
    "pan": 0.3,
-   "src": "cut @139.1s"
+   "src": "cut @138.6s"
   },
   {
    "id": "s22-2-card",
-   "frame": 4195,
+   "frame": 4180,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @139.55s → land"
+   "src": "spring snap @139.05s → land"
   },
   {
    "id": "s22-2-live",
-   "frame": 4202,
+   "frame": 4187,
    "visual": "appear",
    "sound": "paper",
    "pan": 0.3,
-   "src": "spring card @140.05s → start"
+   "src": "spring card @139.55s → start"
   },
   {
    "id": "s22-2-seal",
-   "frame": 4211,
+   "frame": 4196,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @140.35s → start"
+   "src": "spring snap @139.85s → start"
   },
   {
    "id": "s22-2-k0",
@@ -979,65 +979,65 @@
   },
   {
    "id": "s22-3",
-   "frame": 4302,
+   "frame": 4293,
    "visual": "cut",
    "sound": "transition",
    "pan": -0.3,
-   "src": "cut @143.4s"
+   "src": "cut @143.1s"
   },
   {
    "id": "s22-3-card",
-   "frame": 4324,
+   "frame": 4315,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": -0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @143.85s → land"
+   "src": "spring snap @143.55s → land"
   },
   {
    "id": "s22-3-seal",
-   "frame": 4340,
+   "frame": 4331,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @144.65s → start"
+   "src": "spring snap @144.35s → start"
   },
   {
    "id": "s22-4",
-   "frame": 4446,
+   "frame": 4419,
    "visual": "cut",
    "sound": "paper",
    "pan": 0,
-   "src": "cut @148.2s"
+   "src": "cut @147.3s"
   },
   {
    "id": "s22-4-card",
-   "frame": 4468,
+   "frame": 4441,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @148.65s → land"
+   "src": "spring snap @147.75s → land"
   },
   {
    "id": "s22-4-live",
-   "frame": 4475,
+   "frame": 4448,
    "visual": "appear",
    "sound": "paper",
    "pan": 0.3,
-   "src": "spring card @149.15s → start"
+   "src": "spring card @148.25s → start"
   },
   {
    "id": "s22-4-seal",
-   "frame": 4484,
+   "frame": 4457,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @149.45s → start"
+   "src": "spring snap @148.55s → start"
   },
   {
    "id": "s22-4-k0",
@@ -1050,30 +1050,30 @@
   },
   {
    "id": "s22-5",
-   "frame": 4572,
+   "frame": 4557,
    "visual": "cut",
    "sound": "paper",
    "pan": 0.3,
-   "src": "cut @152.4s"
+   "src": "cut @151.9s"
   },
   {
    "id": "s22-5-card",
-   "frame": 4594,
+   "frame": 4579,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @152.85s → land"
+   "src": "spring snap @152.35s → land"
   },
   {
    "id": "s22-5-seal",
-   "frame": 4610,
+   "frame": 4595,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @153.65s → start"
+   "src": "spring snap @153.15s → start"
   },
   {
    "id": "s22-5-k0",
@@ -1086,74 +1086,74 @@
   },
   {
    "id": "s22-6",
-   "frame": 4719,
+   "frame": 4686,
    "visual": "cut",
    "sound": "transition",
    "pan": -0.3,
-   "src": "cut @157.3s"
+   "src": "cut @156.2s"
   },
   {
    "id": "s22-6-card",
-   "frame": 4741,
+   "frame": 4708,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": -0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @157.75s → land"
+   "src": "spring snap @156.65s → land"
   },
   {
    "id": "s22-6-live",
-   "frame": 4748,
+   "frame": 4715,
    "visual": "appear",
    "sound": "paper",
    "pan": 0.3,
-   "src": "spring card @158.25s → start"
+   "src": "spring card @157.15s → start"
   },
   {
    "id": "s22-6-seal",
-   "frame": 4757,
+   "frame": 4724,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @158.55s → start"
+   "src": "spring snap @157.45s → start"
   },
   {
    "id": "s22-6-k0",
-   "frame": 4816,
+   "frame": 4734,
    "visual": "appear",
    "sound": "pop",
    "pan": -0.4,
    "pitch": 0,
-   "src": "appear @160.533s"
+   "src": "appear @157.77s"
   },
   {
    "id": "s22-7",
-   "frame": 4845,
+   "frame": 4821,
    "visual": "cut",
    "sound": "paper",
    "pan": 0,
-   "src": "cut @161.5s"
+   "src": "cut @160.7s"
   },
   {
    "id": "s22-7-card",
-   "frame": 4867,
+   "frame": 4843,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @161.95s → land"
+   "src": "spring snap @161.15s → land"
   },
   {
    "id": "s22-7-seal",
-   "frame": 4883,
+   "frame": 4859,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @162.75s → start"
+   "src": "spring snap @161.95s → start"
   },
   {
    "id": "s22-7-k0",
@@ -1165,48 +1165,39 @@
    "src": "appear @163.853s"
   },
   {
-   "id": "s22-7-k2",
-   "frame": 4966,
-   "visual": "appear",
-   "sound": "pop",
-   "pan": 0.4,
-   "pitch": 2,
-   "src": "appear @165.525s"
-  },
-  {
    "id": "s22-8",
-   "frame": 4992,
+   "frame": 4956,
    "visual": "cut",
    "sound": "paper",
    "pan": 0.3,
-   "src": "cut @166.4s"
+   "src": "cut @165.2s"
   },
   {
    "id": "s22-8-card",
-   "frame": 5014,
+   "frame": 4978,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @166.85s → land"
+   "src": "spring snap @165.65s → land"
   },
   {
    "id": "s22-8-live",
-   "frame": 5021,
+   "frame": 4985,
    "visual": "appear",
    "sound": "paper",
    "pan": 0.3,
-   "src": "spring card @167.35s → start"
+   "src": "spring card @166.15s → start"
   },
   {
    "id": "s22-8-seal",
-   "frame": 5030,
+   "frame": 4994,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @167.65s → start"
+   "src": "spring snap @166.45s → start"
   },
   {
    "id": "s22-8-k0",
@@ -1219,65 +1210,101 @@
   },
   {
    "id": "s22-9",
-   "frame": 5112,
+   "frame": 5088,
    "visual": "cut",
    "sound": "transition",
    "pan": -0.3,
-   "src": "cut @170.4s"
+   "src": "cut @169.6s"
   },
   {
    "id": "s22-9-card",
-   "frame": 5134,
+   "frame": 5110,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": -0.25,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @170.85s → land"
+   "src": "spring snap @170.05s → land"
   },
   {
    "id": "s22-9-seal",
-   "frame": 5150,
+   "frame": 5126,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @171.65s → start"
+   "src": "spring snap @170.85s → start"
+  },
+  {
+   "id": "s22-9-k0",
+   "frame": 5149,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @171.609s"
   },
   {
    "id": "s22-10",
-   "frame": 5232,
+   "frame": 5223,
    "visual": "cut",
    "sound": "paper",
    "pan": 0,
-   "src": "cut @174.4s"
+   "src": "cut @174.1s"
   },
   {
    "id": "s22-10-card",
-   "frame": 5254,
+   "frame": 5245,
    "visual": "land",
    "sound": "thump/fs-133282-thump-on-carpet-2+tap",
    "weight": "hero",
    "pan": 0,
    "stop_before": true,
    "build": true,
-   "src": "spring snap @174.85s → land"
+   "src": "spring snap @174.55s → land"
   },
   {
    "id": "s22-10-live",
-   "frame": 5261,
+   "frame": 5252,
    "visual": "appear",
    "sound": "paper",
    "pan": 0.3,
-   "src": "spring card @175.35s → start"
+   "src": "spring card @175.05s → start"
   },
   {
    "id": "s22-10-seal",
-   "frame": 5270,
+   "frame": 5261,
    "visual": "appear",
    "sound": "hit+tap",
    "pan": -0.25,
-   "src": "spring snap @175.65s → start"
+   "src": "spring snap @175.35s → start"
+  },
+  {
+   "id": "s22-11",
+   "frame": 5352,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "cut @178.4s"
+  },
+  {
+   "id": "s22-11-card",
+   "frame": 5374,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @178.85s → land"
+  },
+  {
+   "id": "s22-11-seal",
+   "frame": 5390,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @179.65s → start"
   },
   {
    "id": "s23-b0",
@@ -1433,5 +1460,23 @@
    "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
    "src": "ease 231.2–231.79999999999998s → peak"
   }
- ]
+ ],
+ "lufs": -14,
+ "duck_db": 11,
+ "room": {
+  "decay_s": 0.6,
+  "wet_db": -18
+ },
+ "voice": [
+  {
+   "file": "audio/vo.mp3",
+   "start_s": 0.45
+  }
+ ],
+ "music": {
+  "file": "/home/user/.cache/bed_track.wav",
+  "start_s": 0,
+  "loop": false,
+  "fade_out_s": 2.5
+ }
 }

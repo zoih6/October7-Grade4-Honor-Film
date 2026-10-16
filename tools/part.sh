@@ -12,11 +12,13 @@ cd "$REPO/film"
 if ! PAGE=index.html node ../tools/render.mjs --from "$F" --to "$T" --out "/home/user/.cache/out/parts/$N.silent.mp4" > "/home/user/.cache/out/parts/$N.log" 2>&1; then
   echo "!! [$N] فشل الرندر — لن يُرفع. آخر السجل:"; tail -4 "/home/user/.cache/out/parts/$N.log"; exit 1
 fi
-ffmpeg -v error -y -ss "$F" -i "/home/user/.cache/out/parts/$N.silent.mp4" -ss "$F" -i /home/user/.cache/audio/bed.m4a \
-  -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -movflags +faststart -shortest "/home/user/.cache/out/parts/$N.mp4" || { echo "!! [$N] فشل الصوت"; exit 1; }
+cp "/home/user/.cache/out/parts/$N.silent.mp4" "/home/user/.cache/out/parts/$N.mp4"
 DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "/home/user/.cache/out/parts/$N.mp4")
+EXP=$(python3 -c "print(f'{$T-$F:.3f}')")
+OK=$(awk -v a="$DUR" -v b="$EXP" 'BEGIN{d=a-b; if(d<0)d=-d; print (d<0.06)?"1":"0"}')
+if [ "$OK" != "1" ]; then echo "!! [$N] مدة غير مطابقة: $DUR ≠ $EXP"; exit 1; fi
 SIZE=$(stat -c%s "/home/user/.cache/out/parts/$N.mp4")
-echo "── [$N] جاهز: $DUR ث · $((SIZE/1048576))MB ──"
+echo "── [$N] جاهز: $DUR ث · $((SIZE/1048576))MB (صامت — الصوت يُدمج في النسخة النهائية) ──"
 # رفع كأصل في الـRelease (لا يُثقل المستودع)
 UP="https://uploads.github.com/repos/zoih6/October7-Grade4-Honor-Film/releases/$(cat /home/user/.cache/rel_id)/assets?name=$N.mp4"
 for i in 1 2 3; do
