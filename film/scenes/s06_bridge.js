@@ -39,8 +39,9 @@
           // الغطاء ينفتح ويخرج ضوء
           if (kO > 0) {
             g.save(); g.translate(0, -h / 2); g.rotate(-kO * .5); g.translate(0, -kO * 260);
-            g.fillStyle = '#17396a'; rrect(-w / 2, -60, w, 90, 10, g); g.fill();
-            g.strokeStyle = PAL.gold; g.lineWidth = 5; rrect(-w / 2 + 6, -54, w - 12, 78, 8, g); g.stroke(); g.restore();
+            g.fillStyle = '#123058'; rrect(-w / 2, -60, w, 90, 10, g); g.fill();
+            g.strokeStyle = PAL.gold; g.lineWidth = 5; rrect(-w / 2 + 6, -54, w - 12, 78, 8, g); g.stroke();
+            K7.star(0, -14, 22, { color: PAL.goldL, grad: true, shadow: 10 }); g.restore();
             g.save(); g.globalCompositeOperation = 'lighter';
             const R = 60 + kO * 1000, rg = g.createRadialGradient(0, -h / 2, 10, 0, -h / 2, R);
             rg.addColorStop(0, `rgba(255,246,214,${.9 * kO})`); rg.addColorStop(.35, `rgba(255,214,130,${.5 * kO})`); rg.addColorStop(1, 'rgba(255,200,110,0)');
@@ -55,7 +56,7 @@
         K7.voWords(17, t, { x: 540, y: 140, size: 52, font: K7.FONTS.u, weight: 700, color: '#f0e6cc', maxW: 940, gap: 16, within: [70.45, 82] });
       }, st, { depth: .42 });
       // انفجار الضوء النهائي الذي يسلّمنا للأغنية
-      const kb = clamp((t - T.burst) / 1.6);
+      const kb = clamp((t - T.burst) / .5) * (1 - clamp((t - T.burst - .45) / .85));
       if (kb > 0) { g.save(); g.globalCompositeOperation = 'lighter'; g.globalAlpha = E.cubicIn(kb);
         const rg = g.createRadialGradient(540, 900, 20, 540, 900, 200 + kb * 1400);
         rg.addColorStop(0, 'rgba(255,250,232,.95)'); rg.addColorStop(.5, 'rgba(255,228,150,.5)'); rg.addColorStop(1, 'rgba(255,210,120,0)');
