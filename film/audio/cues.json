@@ -1,0 +1,1437 @@
+{
+ "fps": 30,
+ "duration_s": 235.998,
+ "energy": "punchy",
+ "kit": "audio/kit",
+ "cues": [
+  {
+   "id": "s00-dot",
+   "frame": 14,
+   "visual": "land",
+   "sound": "tap",
+   "pan": 0,
+   "src": "spring snap @0.2s → land"
+  },
+  {
+   "id": "s00-pull",
+   "frame": 18,
+   "visual": "move",
+   "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
+   "pan": 0,
+   "src": "ease 0–1.2s → peak"
+  },
+  {
+   "id": "s00-bloom",
+   "frame": 37,
+   "visual": "appear",
+   "sound": "chime+tap",
+   "weight": "hero",
+   "pan": 0.1,
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @1.226s → start"
+  },
+  {
+   "id": "s00-arrow",
+   "frame": 99,
+   "visual": "move",
+   "sound": "swish",
+   "pan": -0.2,
+   "src": "ease 3.027–3.515s → peak"
+  },
+  {
+   "id": "s00-kite1",
+   "frame": 147,
+   "visual": "move",
+   "sound": "swish",
+   "pan": -0.3,
+   "src": "ease 4.401–5.351s → peak"
+  },
+  {
+   "id": "s00-kite2",
+   "frame": 168,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "pan": 0.35,
+   "src": "ease 5.24–5.9s → peak"
+  },
+  {
+   "id": "s01-in",
+   "frame": 177,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @5.9s"
+  },
+  {
+   "id": "s01-tear",
+   "frame": 186,
+   "visual": "move",
+   "sound": "paper/fs-397550-page-turn-03-wav-2",
+   "pan": -0.1,
+   "src": "ease 5.830000000000001–6.530000000000001s → peak"
+  },
+  {
+   "id": "s01-seal",
+   "frame": 213,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+chime",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @6.822s → land"
+  },
+  {
+   "id": "s01-meet",
+   "frame": 228,
+   "visual": "move",
+   "sound": "swish",
+   "pan": 0.2,
+   "src": "ease 7.283–7.883s → peak"
+  },
+  {
+   "id": "s01-star0",
+   "frame": 263,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.3795027788209716,
+   "pitch": 0,
+   "src": "spring snap @8.759s → start"
+  },
+  {
+   "id": "s01-star2",
+   "frame": 273,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.28500007307877306,
+   "pitch": 2,
+   "src": "spring snap @9.079s → start"
+  },
+  {
+   "id": "s01-star4",
+   "frame": 283,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.15263820073225776,
+   "pitch": 1,
+   "src": "spring snap @9.399s → start"
+  },
+  {
+   "id": "s01-star6",
+   "frame": 292,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -1.1102230246251565e-16,
+   "pitch": 0,
+   "src": "spring snap @9.719s → start"
+  },
+  {
+   "id": "s01-star8",
+   "frame": 302,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": 0.1526382007322572,
+   "pitch": 2,
+   "src": "spring snap @10.039s → start"
+  },
+  {
+   "id": "s01-star10",
+   "frame": 311,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": 0.28500007307877273,
+   "pitch": 1,
+   "src": "spring snap @10.359s → start"
+  },
+  {
+   "id": "s01-star12",
+   "frame": 321,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": 0.3795027788209714,
+   "pitch": 0,
+   "src": "spring snap @10.679s → start"
+  },
+  {
+   "id": "s01-path",
+   "frame": 330,
+   "visual": "move",
+   "sound": "shimmer",
+   "src": "ease 10.175999999999998–11.775999999999998s → peak"
+  },
+  {
+   "id": "s01-topt",
+   "frame": 391,
+   "visual": "appear",
+   "sound": "chime",
+   "pan": 0.1,
+   "src": "spring pop @13s → start"
+  },
+  {
+   "id": "s02-sun",
+   "frame": 422,
+   "visual": "appear",
+   "sound": "chime",
+   "src": "spring pop @14.03s → start"
+  },
+  {
+   "id": "s02-dawn",
+   "frame": 423,
+   "visual": "move",
+   "sound": "riser",
+   "src": "ease 13.55–14.6s → peak"
+  },
+  {
+   "id": "s02-band",
+   "frame": 468,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @15.6s"
+  },
+  {
+   "id": "s02-ribbon",
+   "frame": 515,
+   "visual": "land",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring card @16.781s → land"
+  },
+  {
+   "id": "s02-laurel",
+   "frame": 540,
+   "visual": "appear",
+   "sound": "shimmer",
+   "src": "spring card @17.983s → start"
+  },
+  {
+   "id": "s02-push",
+   "frame": 593,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "ease 19.189–20.289s → peak"
+  },
+  {
+   "id": "s03-in",
+   "frame": 597,
+   "visual": "cut",
+   "sound": "glitch",
+   "src": "cut @19.9s"
+  },
+  {
+   "id": "s02-rise",
+   "frame": 604,
+   "sound": "riser",
+   "align": "peak",
+   "src": "frame 604"
+  },
+  {
+   "id": "s03-card",
+   "frame": 610,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @20.05s → land"
+  },
+  {
+   "id": "s03-name",
+   "frame": 637,
+   "visual": "appear",
+   "sound": "chime",
+   "pan": 0.1,
+   "src": "spring pop @21.218s → start"
+  },
+  {
+   "id": "s03-live",
+   "frame": 649,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @21.619s → start"
+  },
+  {
+   "id": "s03-crown",
+   "frame": 661,
+   "visual": "land",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "pan": -0.15,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @21.769s → land"
+  },
+  {
+   "id": "s03-seal",
+   "frame": 677,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @22.536s → start"
+  },
+  {
+   "id": "s04-moayed",
+   "frame": 704,
+   "visual": "cut",
+   "sound": "paper/fs-397550-page-turn-03-wav-2",
+   "src": "cut @23.45s"
+  },
+  {
+   "id": "s04-moayed-card",
+   "frame": 730,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @24.07s → land"
+  },
+  {
+   "id": "s04-moayed-live",
+   "frame": 742,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @24.726s → start"
+  },
+  {
+   "id": "s04-moayed-seal",
+   "frame": 748,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @24.926s → start"
+  },
+  {
+   "id": "s04-saad",
+   "frame": 824,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @27.45s"
+  },
+  {
+   "id": "s04-saad-card",
+   "frame": 850,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @28.07s → land"
+  },
+  {
+   "id": "s04-saad-seal",
+   "frame": 862,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @28.711s → start"
+  },
+  {
+   "id": "s04-anhar",
+   "frame": 914,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @30.45s"
+  },
+  {
+   "id": "s04-anhar-card",
+   "frame": 940,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @31.07s → land"
+  },
+  {
+   "id": "s04-anhar-live",
+   "frame": 946,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @31.506s → start"
+  },
+  {
+   "id": "s04-anhar-seal",
+   "frame": 952,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @31.706s → start"
+  },
+  {
+   "id": "s04-shouq",
+   "frame": 1004,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @33.45s"
+  },
+  {
+   "id": "s04-shouq-card",
+   "frame": 1030,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @34.07s → land"
+  },
+  {
+   "id": "s04-shouq-seal",
+   "frame": 1033,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @34.423s → start"
+  },
+  {
+   "id": "s04-anas",
+   "frame": 1064,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @35.45s"
+  },
+  {
+   "id": "s04-anas-live",
+   "frame": 1085,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @36.127s → start"
+  },
+  {
+   "id": "s04-anas-card",
+   "frame": 1090,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @36.07s → land"
+  },
+  {
+   "id": "s04-anas-seal",
+   "frame": 1090,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @36.327s → start"
+  },
+  {
+   "id": "s04-shomookh",
+   "frame": 1124,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @37.45s"
+  },
+  {
+   "id": "s04-shomookh-card",
+   "frame": 1150,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @38.07s → land"
+  },
+  {
+   "id": "s04-shomookh-seal",
+   "frame": 1159,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @38.626s → start"
+  },
+  {
+   "id": "s04-samar",
+   "frame": 1214,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @40.45s"
+  },
+  {
+   "id": "s04-samar-live",
+   "frame": 1233,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @41.073s → start"
+  },
+  {
+   "id": "s04-samar-seal",
+   "frame": 1239,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @41.273s → start"
+  },
+  {
+   "id": "s04-samar-card",
+   "frame": 1240,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @41.07s → land"
+  },
+  {
+   "id": "s04-waleed",
+   "frame": 1274,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @42.45s"
+  },
+  {
+   "id": "s04-waleed-card",
+   "frame": 1300,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @43.07s → land"
+  },
+  {
+   "id": "s04-waleed-seal",
+   "frame": 1311,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @43.665s → start"
+  },
+  {
+   "id": "s04-rashed",
+   "frame": 1364,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @45.45s"
+  },
+  {
+   "id": "s04-rashed-live",
+   "frame": 1388,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @46.251s → start"
+  },
+  {
+   "id": "s04-rashed-card",
+   "frame": 1390,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @46.07s → land"
+  },
+  {
+   "id": "s04-rashed-seal",
+   "frame": 1394,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @46.451s → start"
+  },
+  {
+   "id": "s04-asaadA",
+   "frame": 1424,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @47.45s"
+  },
+  {
+   "id": "s04-asaadA-card",
+   "frame": 1450,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @48.07s → land"
+  },
+  {
+   "id": "s04-asaadA-seal",
+   "frame": 1463,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @48.75s → start"
+  },
+  {
+   "id": "s04-asaadF",
+   "frame": 1514,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @50.45s"
+  },
+  {
+   "id": "s04-asaadF-card",
+   "frame": 1540,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @51.07s → land"
+  },
+  {
+   "id": "s04-asaadF-live",
+   "frame": 1542,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @51.383s → start"
+  },
+  {
+   "id": "s04-asaadF-seal",
+   "frame": 1548,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @51.583s → start"
+  },
+  {
+   "id": "s04-taher",
+   "frame": 1574,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @52.45s"
+  },
+  {
+   "id": "s04-taher-card",
+   "frame": 1600,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @53.07s → land"
+  },
+  {
+   "id": "s04-taher-seal",
+   "frame": 1611,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.3,
+   "src": "spring snap @53.673s → start"
+  },
+  {
+   "id": "s05-grow",
+   "frame": 1694,
+   "visual": "move",
+   "sound": "shimmer",
+   "src": "ease 55.75–57.15s → peak"
+  },
+  {
+   "id": "s05-name",
+   "frame": 1722,
+   "visual": "appear",
+   "sound": "chime+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @57.372s → start"
+  },
+  {
+   "id": "s05-leaf0",
+   "frame": 1788,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @59.568s → start"
+  },
+  {
+   "id": "s05-leaf3",
+   "frame": 1799,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @59.928s → start"
+  },
+  {
+   "id": "s05-leaf6",
+   "frame": 1809,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @60.288s → start"
+  },
+  {
+   "id": "s05-leaf9",
+   "frame": 1820,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @60.648s → start"
+  },
+  {
+   "id": "s05-leaf12",
+   "frame": 1831,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @61.008s → start"
+  },
+  {
+   "id": "s05-glow",
+   "frame": 1851,
+   "visual": "land",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring card @61.31s → land"
+  },
+  {
+   "id": "s05-sky",
+   "frame": 1969,
+   "visual": "cut",
+   "sound": "transition",
+   "src": "cut @65.617s"
+  },
+  {
+   "id": "s05-wish",
+   "frame": 2055,
+   "visual": "appear",
+   "sound": "chime",
+   "src": "spring pop @68.471s → start"
+  },
+  {
+   "id": "s06-close",
+   "frame": 2157,
+   "visual": "move",
+   "sound": "paper/fs-397550-page-turn-03-wav-2",
+   "src": "ease 71.5–72.3s → peak"
+  },
+  {
+   "id": "s06-gift",
+   "frame": 2298,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "src": "spring card @76.2s → land"
+  },
+  {
+   "id": "s06-mubarak",
+   "frame": 2358,
+   "visual": "appear",
+   "sound": "chime+tap",
+   "src": "spring pop @78.582s → start"
+  },
+  {
+   "id": "s06-open",
+   "frame": 2528,
+   "visual": "land",
+   "sound": "thump+chime",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @84s → land"
+  },
+  {
+   "id": "s20-beat0",
+   "frame": 3000,
+   "visual": "appear",
+   "sound": "tick",
+   "pan": -0.44999999999999996,
+   "src": "appear @99.998s"
+  },
+  {
+   "id": "s20-beat2",
+   "frame": 3035,
+   "visual": "appear",
+   "sound": "tick",
+   "pan": 0.15,
+   "src": "appear @101.136s"
+  },
+  {
+   "id": "s20-one",
+   "frame": 3071,
+   "visual": "land",
+   "sound": "tap",
+   "pan": -0.3,
+   "src": "spring snap @102.1s → land"
+  },
+  {
+   "id": "s20-two",
+   "frame": 3101,
+   "visual": "land",
+   "sound": "tap",
+   "pan": 0,
+   "src": "spring snap @103.1s → land"
+  },
+  {
+   "id": "s20-three",
+   "frame": 3133,
+   "visual": "land",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @104.15s → land"
+  },
+  {
+   "id": "s20-beat4",
+   "frame": 3152,
+   "visual": "appear",
+   "sound": "tick",
+   "pan": -0.44999999999999996,
+   "src": "appear @105.037s"
+  },
+  {
+   "id": "s20-yalla",
+   "frame": 3161,
+   "visual": "appear",
+   "sound": "thump+chime",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @105.35s → start"
+  },
+  {
+   "id": "s20-wall",
+   "frame": 3195,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "spring card @106.4s → peak"
+  },
+  {
+   "id": "s20-beat6",
+   "frame": 3202,
+   "visual": "appear",
+   "sound": "tick",
+   "pan": 0.15,
+   "src": "appear @106.709s"
+  },
+  {
+   "id": "s20-beat8",
+   "frame": 3235,
+   "visual": "appear",
+   "sound": "tick",
+   "pan": -0.44999999999999996,
+   "src": "appear @107.824s"
+  },
+  {
+   "id": "s21-wall",
+   "frame": 3366,
+   "visual": "move",
+   "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
+   "src": "spring card @112.1s → peak"
+  },
+  {
+   "id": "s21-title",
+   "frame": 3379,
+   "visual": "appear",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @112.6s → start"
+  },
+  {
+   "id": "s21-pull",
+   "frame": 3635,
+   "visual": "move",
+   "sound": "swish",
+   "src": "ease 120.6–121.69999999999999s → peak"
+  },
+  {
+   "id": "s21-star",
+   "frame": 3746,
+   "visual": "land",
+   "sound": "thump+chime",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @124.6s → land"
+  },
+  {
+   "id": "s22-0",
+   "frame": 3900,
+   "visual": "cut",
+   "sound": "transition",
+   "pan": -0.3,
+   "src": "cut @130s"
+  },
+  {
+   "id": "s22-0-card",
+   "frame": 3922,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @130.45s → land"
+  },
+  {
+   "id": "s22-0-live",
+   "frame": 3929,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @130.95s → start"
+  },
+  {
+   "id": "s22-0-seal",
+   "frame": 3938,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @131.25s → start"
+  },
+  {
+   "id": "s22-1",
+   "frame": 4029,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0,
+   "src": "cut @134.3s"
+  },
+  {
+   "id": "s22-1-card",
+   "frame": 4051,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @134.75s → land"
+  },
+  {
+   "id": "s22-1-seal",
+   "frame": 4067,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @135.55s → start"
+  },
+  {
+   "id": "s22-1-k0",
+   "frame": 4085,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @136.152s"
+  },
+  {
+   "id": "s22-2",
+   "frame": 4173,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "cut @139.1s"
+  },
+  {
+   "id": "s22-2-card",
+   "frame": 4195,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @139.55s → land"
+  },
+  {
+   "id": "s22-2-live",
+   "frame": 4202,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @140.05s → start"
+  },
+  {
+   "id": "s22-2-seal",
+   "frame": 4211,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @140.35s → start"
+  },
+  {
+   "id": "s22-2-k0",
+   "frame": 4235,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @141.144s"
+  },
+  {
+   "id": "s22-3",
+   "frame": 4302,
+   "visual": "cut",
+   "sound": "transition",
+   "pan": -0.3,
+   "src": "cut @143.4s"
+  },
+  {
+   "id": "s22-3-card",
+   "frame": 4324,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @143.85s → land"
+  },
+  {
+   "id": "s22-3-seal",
+   "frame": 4340,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @144.65s → start"
+  },
+  {
+   "id": "s22-4",
+   "frame": 4446,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0,
+   "src": "cut @148.2s"
+  },
+  {
+   "id": "s22-4-card",
+   "frame": 4468,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @148.65s → land"
+  },
+  {
+   "id": "s22-4-live",
+   "frame": 4475,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @149.15s → start"
+  },
+  {
+   "id": "s22-4-seal",
+   "frame": 4484,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @149.45s → start"
+  },
+  {
+   "id": "s22-4-k0",
+   "frame": 4501,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @150.014s"
+  },
+  {
+   "id": "s22-5",
+   "frame": 4572,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "cut @152.4s"
+  },
+  {
+   "id": "s22-5-card",
+   "frame": 4594,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @152.85s → land"
+  },
+  {
+   "id": "s22-5-seal",
+   "frame": 4610,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @153.65s → start"
+  },
+  {
+   "id": "s22-5-k0",
+   "frame": 4634,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @154.449s"
+  },
+  {
+   "id": "s22-6",
+   "frame": 4719,
+   "visual": "cut",
+   "sound": "transition",
+   "pan": -0.3,
+   "src": "cut @157.3s"
+  },
+  {
+   "id": "s22-6-card",
+   "frame": 4741,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @157.75s → land"
+  },
+  {
+   "id": "s22-6-live",
+   "frame": 4748,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @158.25s → start"
+  },
+  {
+   "id": "s22-6-seal",
+   "frame": 4757,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @158.55s → start"
+  },
+  {
+   "id": "s22-6-k0",
+   "frame": 4816,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @160.533s"
+  },
+  {
+   "id": "s22-7",
+   "frame": 4845,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0,
+   "src": "cut @161.5s"
+  },
+  {
+   "id": "s22-7-card",
+   "frame": 4867,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @161.95s → land"
+  },
+  {
+   "id": "s22-7-seal",
+   "frame": 4883,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @162.75s → start"
+  },
+  {
+   "id": "s22-7-k0",
+   "frame": 4916,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @163.853s"
+  },
+  {
+   "id": "s22-7-k2",
+   "frame": 4966,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": 0.4,
+   "pitch": 2,
+   "src": "appear @165.525s"
+  },
+  {
+   "id": "s22-8",
+   "frame": 4992,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "cut @166.4s"
+  },
+  {
+   "id": "s22-8-card",
+   "frame": 5014,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @166.85s → land"
+  },
+  {
+   "id": "s22-8-live",
+   "frame": 5021,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @167.35s → start"
+  },
+  {
+   "id": "s22-8-seal",
+   "frame": 5030,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @167.65s → start"
+  },
+  {
+   "id": "s22-8-k0",
+   "frame": 5049,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.4,
+   "pitch": 0,
+   "src": "appear @168.288s"
+  },
+  {
+   "id": "s22-9",
+   "frame": 5112,
+   "visual": "cut",
+   "sound": "transition",
+   "pan": -0.3,
+   "src": "cut @170.4s"
+  },
+  {
+   "id": "s22-9-card",
+   "frame": 5134,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": -0.25,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @170.85s → land"
+  },
+  {
+   "id": "s22-9-seal",
+   "frame": 5150,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @171.65s → start"
+  },
+  {
+   "id": "s22-10",
+   "frame": 5232,
+   "visual": "cut",
+   "sound": "paper",
+   "pan": 0,
+   "src": "cut @174.4s"
+  },
+  {
+   "id": "s22-10-card",
+   "frame": 5254,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "pan": 0,
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @174.85s → land"
+  },
+  {
+   "id": "s22-10-live",
+   "frame": 5261,
+   "visual": "appear",
+   "sound": "paper",
+   "pan": 0.3,
+   "src": "spring card @175.35s → start"
+  },
+  {
+   "id": "s22-10-seal",
+   "frame": 5270,
+   "visual": "appear",
+   "sound": "hit+tap",
+   "pan": -0.25,
+   "src": "spring snap @175.65s → start"
+  },
+  {
+   "id": "s23-b0",
+   "frame": 5496,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.35,
+   "src": "appear @183.196s"
+  },
+  {
+   "id": "s23-rail",
+   "frame": 5499,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "spring card @183.2s → peak"
+  },
+  {
+   "id": "s23-b2",
+   "frame": 5563,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": 0.11666666666666663,
+   "src": "appear @185.401s"
+  },
+  {
+   "id": "s23-b4",
+   "frame": 5629,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": -0.35,
+   "src": "appear @187.607s"
+  },
+  {
+   "id": "s23-dolly",
+   "frame": 5641,
+   "visual": "move",
+   "sound": "swish",
+   "src": "ease 184.5–191.5s → peak"
+  },
+  {
+   "id": "s23-b6",
+   "frame": 5678,
+   "visual": "appear",
+   "sound": "pop",
+   "pan": 0.11666666666666663,
+   "src": "appear @189.256s"
+  },
+  {
+   "id": "s23-teach",
+   "frame": 5771,
+   "visual": "land",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @192.1s → land"
+  },
+  {
+   "id": "s23-tree",
+   "frame": 5785,
+   "visual": "appear",
+   "sound": "shimmer",
+   "src": "spring card @192.8s → start"
+  },
+  {
+   "id": "s23-l0",
+   "frame": 5827,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @194.2s → start"
+  },
+  {
+   "id": "s23-l3",
+   "frame": 5836,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @194.5s → start"
+  },
+  {
+   "id": "s23-l6",
+   "frame": 5845,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @194.8s → start"
+  },
+  {
+   "id": "s23-l9",
+   "frame": 5854,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @195.1s → start"
+  },
+  {
+   "id": "s23-l12",
+   "frame": 5863,
+   "visual": "appear",
+   "sound": "paper",
+   "pitch": 0,
+   "src": "spring card @195.4s → start"
+  },
+  {
+   "id": "s24-dua1",
+   "frame": 6169,
+   "visual": "appear",
+   "sound": "chime+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @205.6s → start"
+  },
+  {
+   "id": "s24-dua2",
+   "frame": 6295,
+   "visual": "appear",
+   "sound": "shimmer",
+   "src": "spring pop @209.8s → start"
+  },
+  {
+   "id": "s24-logo",
+   "frame": 6446,
+   "visual": "land",
+   "sound": "thump+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring snap @214.6s → land"
+  },
+  {
+   "id": "s24-school",
+   "frame": 6589,
+   "visual": "appear",
+   "sound": "chime",
+   "src": "spring card @219.6s → start"
+  },
+  {
+   "id": "s24-mubarak",
+   "frame": 6679,
+   "visual": "appear",
+   "sound": "thump+chime",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring pop @222.6s → start"
+  },
+  {
+   "id": "s24-wamd",
+   "frame": 6945,
+   "visual": "move",
+   "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
+   "src": "ease 231.2–231.79999999999998s → peak"
+  }
+ ]
+}
