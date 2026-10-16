@@ -20,7 +20,6 @@ echo "── [$N] جاهز: $DUR ث · $((SIZE/1048576))MB ──"
 # رفع كأصل في الـRelease (لا يُثقل المستودع)
 UP="https://uploads.github.com/repos/zoih6/October7-Grade4-Honor-Film/releases/$(cat /home/user/.cache/rel_id)/assets?name=$N.mp4"
 for i in 1 2 3; do
-  RID=$(curl -s -X POST -H "Authorization: Bearer $TOK" -H "Content-Type: video/mp4" --data-binary "@-${0}" "@-" < /dev/null 2>/dev/null; true)
   curl -s -o /home/user/.cache/out/parts/up.json -w "%{http_code}" -X POST \
     -H "Authorization: Bearer $TOK" -H "Content-Type: application/video" \
     --data-binary "@/home/user/.cache/out/parts/$N.mp4" "$UP" > /home/user/.cache/out/parts/code.txt
