@@ -56,7 +56,7 @@
       K7.parallax(() => {
         // لوح الشهادة الفخم
         const kb = clamp((t - T.logo + .55) / .8);
-        if (kb > 0) { const bw = lerp(700, 1004, E.cubicOut(kb)), bh = 1200, by = 930;
+        if (kb > 0) { const bw = lerp(700, 1004, E.cubicOut(kb)), bh = 1360, by = 960;
           g.save(); g.translate(540, by); g.rotate(-.006);
           g.save(); g.shadowColor = 'rgba(0,0,0,.55)'; g.shadowBlur = 44; g.shadowOffsetY = 18;
           g.fillStyle = 'rgba(247,240,224,.98)'; rrect(-bw / 2, -bh / 2, bw, bh, 18, g); g.fill(); g.restore();
@@ -74,20 +74,19 @@
         const kl = spring(t - T.logo, 150, 19);
         if (kl > .001) {
           const sh = K7.lensShake(t, T.logo, 14, 26, 7);
-          g.save(); g.globalAlpha = clamp(kl * 2); g.translate(540 + sh[0], 640 + sh[1]); g.scale(lerp(2.6, 1, kl), lerp(2.6, 1, kl)); g.rotate(-.04 + (1 - kl) * .25);
+          g.save(); g.globalAlpha = clamp(kl * 2); g.translate(540 + sh[0], 660 + sh[1]); const kls = lerp(2.6, .78, kl); g.scale(kls, kls); g.rotate(-.04 + (1 - kl) * .25);
           g.shadowColor = 'rgba(0,0,0,.5)'; g.shadowBlur = 36; g.shadowOffsetY = 14;
           g.drawImage(T7.seals.logoBig, -T7.seals.logoBig.width / 2, -T7.seals.logoBig.height / 2); g.restore();
           for (let i = 0; i < 2; i++) { const kr = clamp((t - T.logo - i * .07) / .7); if (kr <= 0 || kr >= 1) continue;
             g.save(); g.globalAlpha = (1 - kr) * .45; g.strokeStyle = PAL.goldL; g.lineWidth = 8 * (1 - kr) + 2;
-            g.beginPath(); g.arc(540, 640, 250 + kr * 440, 0, 7); g.stroke(); g.restore(); }
+            g.beginPath(); g.arc(540, 660, 220 + kr * 440, 0, 7); g.stroke(); g.restore(); }
         }
         // أوائل الصف الرابع
-        KT.show(T7.TX('أوائل الصف الرابع', { size: 84, color: PAL.navy, font: K7.FONTS.d, weight: 800 }), t,
-          { x: 540, y: 950, t0: T.logo + .25, in: 'rise', dist: 30, t1: 235.4, out: 'lift', outDur: .3 });
+        KT.show(P.g4, t, { x: 540, y: 1032, t0: T.logo + .25, in: 'rise', dist: 30, t1: 235.4, out: 'lift', outDur: .3 });
         // شريط اسم المدرسة
         const kr2 = clamp((t - T.lock) / .6);
         if (kr2 > 0) { const wd = P.school.img, w0 = wd.width + 130, h0 = 116;
-          g.save(); g.globalAlpha = kr2; g.translate(540, 1085); g.scale(lerp(.9, 1, E.cubicOut(kr2)), 1);
+          g.save(); g.globalAlpha = kr2; g.translate(540, 1165); g.scale(lerp(.9, 1, E.cubicOut(kr2)), 1);
           g.save(); g.shadowColor = 'rgba(0,0,0,.4)'; g.shadowBlur = 18; g.shadowOffsetY = 7;
           g.fillStyle = 'rgba(22,48,94,.97)'; rrect(-w0 / 2, -h0 / 2, w0, h0, 12, g); g.fill(); g.restore();
           g.strokeStyle = 'rgba(201,162,39,.9)'; g.lineWidth = 4; rrect(-w0 / 2 + 7, -h0 / 2 + 7, w0 - 14, h0 - 14, 9, g); g.stroke();
@@ -95,11 +94,11 @@
           K7.star(w0 / 2 - 44, 0, 20, { color: PAL.gold, grad: true, shadow: 12 });
           g.drawImage(wd, -wd.width / 2, -wd.height / 2); g.restore(); }
         // ألف مبارك لكم
-        KT.show(P.mubarak, t, { x: 540, y: 1282, t0: T.mubarak, in: 'pop', spring: 'pop', t1: 235.6, out: 'lift', outDur: .3 });
+        KT.show(P.mubarak, t, { x: 540, y: 1338, t0: T.mubarak, in: 'pop', spring: 'pop', t1: 235.6, out: 'lift', outDur: .3 });
         // صفّ الطلاب: ١٣ دائرة (طوابع) أسفل الشهادة
         STUDENTS.forEach((s, i) => {
           const ki = clamp((t - (T.mubarak + .8 + i * .06)) / .5); if (ki <= .004) return;
-          const px = 540 + (i - (STUDENTS.length - 1) / 2) * 72, py = 1470;
+          const px = 540 + (i - (STUDENTS.length - 1) / 2) * 72, py = 1498;
           const im = A['p_' + s.id]; if (!im) return;
           g.save(); g.globalAlpha = clamp(ki * 2); g.translate(px, py + (1 - ki) * 20); g.scale(ki, ki);
           g.beginPath(); g.arc(0, 0, 30, 0, 7); g.save();
@@ -110,7 +109,7 @@
           g.strokeStyle = i < 3 ? PAL.goldL : 'rgba(201,162,39,.85)'; g.lineWidth = i < 3 ? 4 : 3; g.beginPath(); g.arc(0, 0, 30, 0, 7); g.stroke(); g.restore();
         });
         // العام الدراسي
-        KT.show(P.year, t, { x: 540, y: 1590, t0: T.mubarak + 1.2, in: 'rise', dist: 22, t1: 235.6, out: 'lift', outDur: .3 });
+        KT.show(P.year, t, { x: 540, y: 1602, t0: T.mubarak + 1.2, in: 'rise', dist: 22, t1: 235.6, out: 'lift', outDur: .3 });
         K7.confetti(t, T.mubarak, { x: 540, y: 1280, n: 70, power: 1.15, spread: 2.6, seed: 199, grav: 560, dur: 3.4 });
       }, st, { depth: .4 });
       K7.motes(t, { n: 22, alpha: .4, seed: 141 });
